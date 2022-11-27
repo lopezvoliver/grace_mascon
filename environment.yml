@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - ipywidgets
+  - pandas
+  - geopandas
+  - seaborn
+  - netcdf4
+  - xarray
+  - rioxarray

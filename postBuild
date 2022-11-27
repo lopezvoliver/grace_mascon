@@ -1,0 +1,1 @@
+wget -q -O CSR_GRACE_GRACE-FO_RL06_Mascons_all-corrections_v02.nc "http://download.csr.utexas.edu/outgoing/grace/RL06_mascons/CSR_GRACE_GRACE-FO_RL06_Mascons_all-corrections_v02.nc"
