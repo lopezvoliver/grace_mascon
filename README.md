@@ -9,7 +9,7 @@ Save, H., S. Bettadpur, and B.D. Tapley (2016), High resolution CSR GRACE RL05 m
 The notebook [index.ipynb](index.ipynb) [can be opened in binder](https://binder.kaust.edu.sa/v2/gh/lopezvoliver/grace_mascon/master?labpath=index.ipynb). One region of study is already loaded as [a geojson file](Saq.geojson): the Saq aquifer system in Saudi Arabia. The notebook loads the netcdf data and clips to this region. An interactive visualization then allows you to calculate a linear trend between a selected date range. 
 
 
-![image](https://user-images.githubusercontent.com/14804652/204226749-392d8e29-b2ec-4f07-b517-31c7b6ea1cfd.png)
+![image](https://user-images.githubusercontent.com/14804652/204227023-08075ca3-2e5b-4a9b-ab41-bfede1332364.png)
 
 ![image](https://user-images.githubusercontent.com/14804652/204219186-2ee46005-a30f-4f63-9c8a-0972486c608e.png)
 
