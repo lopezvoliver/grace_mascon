@@ -1,4 +1,4 @@
-[![Binder](https://binder.kaust.edu.sa/badge_logo.svg)](https://binder.kaust.edu.sa/v2/gh/lopezvoliver/grace_mascon/master?labpath=index.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binder.kaust.edu.sa/v2/gh/lopezvoliver/grace_mascon/master?labpath=index.ipynb)
 
 # GRACE mascon linear trend 
 
