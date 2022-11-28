@@ -139,8 +139,8 @@ class trend(object):
         sns.lineplot(data=data.query("date>@Start"), x="date", y="linear_twsa", ax = ax, color="black")
 
         ax.set_xlabel("")
-        ax.set_ylabel("Total Water Storage (mm)", fontsize=14)#, **hfont)
-        ax.set_title("Estimated depletion represented as Total Water Storage (TWS)", fontsize=16)#, **hfont)
+        ax.set_ylabel("Total Water Storage A.(mm)", fontsize=14)#, **hfont)
+        ax.set_title("Estimated depletion represented as Total Water Storage Anomaly (TWSA)", fontsize=14)#, **hfont)
 
         # "Saq aquifer" annotation:
         annotate_kws = {"size": 16, "xytext": (0,0), "textcoords": "offset points", "fontweight": "bold"}
