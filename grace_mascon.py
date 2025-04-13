@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import ipywidgets
+from IPython.display import display, HTML
 from datetime import datetime
 
 class trend(object):
@@ -17,7 +18,7 @@ class trend(object):
                 the GRACE data as a geopandas data frame.
         """
         self.csr_url = \
-        'http://download.csr.utexas.edu/outgoing/grace/RL06_mascons/CSR_GRACE_GRACE-FO_RL06_Mascons_all-corrections_v02.nc'
+        'https://download.csr.utexas.edu/outgoing/grace/RL0603_mascons/CSR_GRACE_GRACE-FO_RL0603_Mascons_all-corrections.nc'
         self.nc_file = nc_file
         if not os.path.isfile(self.nc_file):
             print("Downloading the netcdf data from")
@@ -170,7 +171,7 @@ class trend(object):
         default_start_date = datetime(2007, 1, 1)
         default_end_date = datetime(2022, 8, 15)
         start_date = datetime(2002, 1, 1)
-        end_date = datetime(2022, 12, 31)
+        end_date = datetime(2025, 12, 31)
         dates = pd.date_range(start_date, end_date, freq='D')
         options = {date.strftime(' %d %b %Y '): date for date in dates}
         pick_start = ipywidgets.widgets.DatePicker(
@@ -189,7 +190,7 @@ class trend(object):
             continuous_update=False,
             description='Trend period',
             orientation='horizontal',
-            layout=ipywidgets.widgets.Layout(width='100%', padding='35px')
+            layout=ipywidgets.widgets.Layout(width='80%'),
         )
         def update_pick(*args):
             pick_start.value = selection_range_slider.value[0]
@@ -209,7 +210,17 @@ class trend(object):
             selection_range_slider, 
             #pick_end
             ], layout=center_layout)
+
        
+        # Patch to increase max_width of value in SelectionRangeSlider
+        display(HTML('''
+        <style>
+        .widget-readout {
+            max-width: none !important;
+            white-space: nowrap;
+        }
+        </style>
+        '''))
 
         update_slider('value')
         display(control)
